@@ -1,0 +1,16 @@
+{
+  "name": "New Tab Plus",
+  "description": "New Tab Experience",
+  "homepage_url": "https://github.com/bayudarmantra-dev/new-tab-plus",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "action": {
+    "default_title": "execute.js will run (watch the Chrome DevTools' console)"
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "permissions": [
+    "storage"
+  ]
+}
