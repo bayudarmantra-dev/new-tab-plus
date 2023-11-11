@@ -1,0 +1,9 @@
+.card {
+    padding: 20px 24px;
+    border-radius: 20px;
+    background-color: $color-secondary;
+
+    &:not(:last-child) {
+        margin-bottom: 25px;
+    }
+}

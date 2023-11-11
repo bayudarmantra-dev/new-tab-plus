@@ -1,0 +1,49 @@
+:root {
+    font-family: $font-family-base;
+    line-height: $line-height-base;
+    font-weight: $font-weight-normal;
+    font-size: 16px;
+}
+
+* {
+    &,
+    &:before,
+    &:after {
+        box-sizing: border-box;
+    }
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    color: $color-text;
+    background-color: $color-primary;
+    font-family: $font-family-base;
+}
+
+#main {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.content-wrapper {
+    flex: 0 0 80%;
+    padding: 30px;
+    overflow-x: hidden;
+
+    .inner {
+        max-width: 40%;
+    }
+}
+
+a {
+    color: $color-text;
+    text-decoration: none;
+}

@@ -1,13 +1,59 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Tab Plus</title>
+</head>
+<body>
+    <main id="main">
+        <nav class="nav">
+            <div class="nav__section">
+                <div class="nav__section__header">
+                    <span class="nav__section__header__title">Feeds</span>
+                    <button class="nav__section__header__button" data-modal="#modal-add-feed"><i class="icon-plus-circle"></i></button>
+                </div>
+                <ul class="nav__section__list">
+                    <li><a href="#"><i class="icon-rss"></i> Reddit Dota2</a></li>
+                    <li><a href="#"><i class="icon-rss"></i> Reddit OnePiece</a></li>
+                </ul>
+            </div>
+            <div class="nav__section">
+                <ul class="nav__section__list">
+                    <li><a href="#"><i class="icon-cog"></i> Settings</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="content-wrapper">
+            <div class="modal" id="modal-add-feed">
+                <div class="modal__inner">
+                    <div class="modal__header">
+                        <span class="modal__header__title">Add Feed</span>
+                        <button class="modal__header__button"><i class="icon-close"></i></button>
+                    </div>
+                    <div class="modal__body">
+                        <form id="form-add-feed" class="form">
+                            <div class="form__group">
+                                <label for="feed-name">Name</label>
+                                <input type="text" name="feed_name" id="feed-name" class="form__control">
+                            </div>
+                            <div class="form__group">
+                                <label for="feed-url">URL</label>
+                                <input type="url" name="feed_url" id="feed-url" class="form__control">
+                            </div>
+                            <div class="form__group">
+                                <button class="form__button" type="submit">Add</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inner">
+                <div id="feeds"></div>
+            </div>
+        </div>
+    </main>
+    <script src="js/main.js" type="module"></script>
+</body>
 </html>
